@@ -8,6 +8,7 @@ WriteMakefile(
     PREREQ_PM => {
         'JSON'           => 0,
         'LWP::UserAgent' => 0,
+        'HTTP::Request'  => 0,
     },
     TEST_REQUIRES  => {
         'Test::More' => 0,
