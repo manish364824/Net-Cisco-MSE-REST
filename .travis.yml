@@ -12,10 +12,10 @@ perl:
 #    - sudo apt-get install -y libgmp-dev
 #    - cpanm Test::Pod # optional dependency
 
-install:
-    - cpanm -v --installdeps --notest .
+#install:
+#    - cpanm -v --installdeps --notest .
 
-script: "perl Build.PL; ./Build test"
+#script: "perl Build.PL; ./Build test"
 branches:
   only:
     - master
