@@ -252,6 +252,8 @@ sub _get {
 1;
 __END__
 
+=encoding utf8
+
 =head1 NAME
 
 Net::Cisco::MSE::REST - REST interface for Cisco MSE
