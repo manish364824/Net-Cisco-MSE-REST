@@ -299,9 +299,9 @@ The mapscount returns maps count specifying the number of Campuses, Buildings, a
 The mapsinfo object returns all the floor information associated with the campusName -> buildingName -> floorName. This includes floor dimension, Access Points and their information, GPS Markers etc.
 
 Parameters:
-* floorname—Name of the required floor
-* buildingname—Name of the required building
-* campusname—Name of the required campus
+floorname—Name of the required floor
+buildingname—Name of the required building
+campusname—Name of the required campus
 
 =head2 $rest->maps_image
 
@@ -309,9 +309,9 @@ The mapsimage object returns the floor image data associated with the particular
 
 Parameters:
 
-* floorname—Name of the required floor
-* buildingname—Name of the required building
-* campusname—Name of the required campus
+floorname—Name of the required floor
+buildingname—Name of the required building
+campusname—Name of the required campus
 
 =head2 $rest->maps_image_source
 
@@ -319,7 +319,7 @@ The mapsimagesource object returns the image associated with the specified image
 
 Parameters:
 
-* imageName—Name of the required image.
+imageName—Name of the required image.
 
 =head2 $rest->real_time_localisation_for_client
 
@@ -327,7 +327,7 @@ The location clients object returns the current location of the wireless client 
 
 Parameters:
 
-* id: Mac address, IP Address, or Username of the wireless client.
+id: Mac address, IP Address, or Username of the wireless client.
 
 =head2 $rest->real_time_localisation_for_client_count
 
@@ -343,7 +343,7 @@ The location tags count object returns a count of Tags on MSE based on the speci
 
 Parameters:
 
-* []: Defines query conditions for the tag.
+[]: Defines query conditions for the tag.
 
 =head2 $rest->real_time_localisation_for_rogueaps
 
@@ -351,7 +351,7 @@ Returns a list of Location of Rogue APs for the specified query conditions.
 
 Parameters:
 
-* []: Defines query conditions for the rogue AP.
+[]: Defines query conditions for the rogue AP.
 
 =head2 $rest->real_time_localisation_for_rogueaps_count
 
@@ -360,7 +360,7 @@ Returns a list of Location of Rogue APs for the specified query conditions.
 
 Parameters:
 
-* []: Defines query conditions for the rogue AP.
+[]: Defines query conditions for the rogue AP.
 
 =head2 $rest->real_time_localisation_for_rogueclients
 
@@ -368,7 +368,7 @@ Returns the Location of Rogue Client for the specified id.
 
 Parameters:
 
-* id: MAC address of the rogue client.
+id: MAC address of the rogue client.
 
 =head2 $rest->real_time_localisation_for_rogueclients_count
 
@@ -376,7 +376,7 @@ Returns a count of Rogue Clients on MSE based on the specified Query Param condi
 
 Parameters:
 
-* []: Defines query conditions for the rogue client.
+[]: Defines query conditions for the rogue client.
 
 =head2 $rest->real_time_localisation_for_interferers
 
@@ -385,7 +385,7 @@ Returns a count of Rogue Clients on MSE based on the specified Query Param condi
 
 Parameters:
 
-* id: MAC address of the interferer.
+id: MAC address of the interferer.
 
 =head2 $rest->real_time_localisation_for_interferers_count
 
@@ -393,7 +393,7 @@ Returns a count of Interferers on MSE based on the specified Query Param conditi
 
 Parameters:
 
-* []: Defines query conditions for the interferers.
+[]: Defines query conditions for the interferers.
 
 =head2 $rest->localisation_history_for_client
 
@@ -401,8 +401,8 @@ Returns a list of historical Location records of Wireless Client for the specifi
 
 Parameters:
 
-* id: MAC address, IP address, or username of the wireless client.
-* []: Defines query conditions for the wireless client
+id: MAC address, IP address, or username of the wireless client.
+[]: Defines query conditions for the wireless client
 
 =head2 $rest->localisation_history_for_client_count
 
@@ -410,7 +410,7 @@ Returns a count of historical Location records of Wireless Clients on MSE based 
 
 Parameters:
 
-* []: Defines query conditions for the wireless client.
+[]: Defines query conditions for the wireless client.
 
 =head2 $rest->localisation_history_for_tags
 
@@ -418,8 +418,8 @@ Returns a list of the historical Location records of Tag for the specified id an
 
 Parameters:
 
-* id: MAC address of the tag
-* []: Defines query conditions for the tag.
+id: MAC address of the tag
+[]: Defines query conditions for the tag.
 
 
 =head2 $rest->localisation_history_for_tags_count
@@ -428,7 +428,7 @@ Returns a count of historical location records of Tags on MSE based on the speci
 
 Parameters:
 
-* []: Defines query conditions for the interferers.
+[]: Defines query conditions for the interferers.
 
 =head2 $rest->localisation_history_for_rogueaps
 
@@ -436,7 +436,7 @@ Returns a list of historical records of Location of Rogue APs for the specified 
 
 Parameters:
 
-* []: Defines query conditions for the rogue AP.
+[]: Defines query conditions for the rogue AP.
 
 =head2 $rest->localisation_history_for_rogueaps_count
 
@@ -444,7 +444,7 @@ Returns a count of historical Location records of Rogue APs based on the specifi
 
 Parameters:
 
-* []: Defines query conditions for the rogue AP.
+[]: Defines query conditions for the rogue AP.
 
 =head2 $rest->localisation_history_for_rogueclients
 
@@ -452,7 +452,7 @@ Returns a list of historical Location records of Rogue Clients for the specified
 
 Parameters:
 
-* []: Defines query conditions for the rogue client.
+[]: Defines query conditions for the rogue client.
 
 =head2 $rest->localisation_history_for_rogueclients_count
 
@@ -460,7 +460,7 @@ Returns a count of Historical Location records of Rogue Clients on MSE based on 
 
 Parameters:
 
-* []: Defines query conditions for the rogue client.
+[]: Defines query conditions for the rogue client.
 
 =head2 $rest->localisation_history_for_interferers
 
@@ -468,7 +468,7 @@ Returns a list of historical Location records of Interferers for the specified q
 
 Parameters:
 
-* []: Defines query conditions for the interferers.
+[]: Defines query conditions for the interferers.
 
 =head2 $rest->localisation_history_for_interferers_count
 
@@ -476,7 +476,7 @@ Returns a count of historical Location records of Interferers for the specified 
 
 Parameters:
 
-* []: Defines query conditions for the interferers.
+[]: Defines query conditions for the interferers.
 
 
 =head1 LICENSE
