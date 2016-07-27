@@ -546,6 +546,58 @@ Parameters:
 
 * []: Defines query conditions for the interferers.
 
+=head2 $rest->notification_create
+
+Create and subscribe to a notification
+
+Parameters:
+
+* {"NotificationSubscription"=> {
+     "name"=> "OutIn",
+     "notificationType"=> "EVENT_DRIVEN",
+     "dataFormat"=> "JSON",
+     "subscribedEvents"=>    [
+              {
+           "type"=> "ContainmentEventTrigger",
+           "eventEntity"=> "WIRELESS_CLIENTS",
+           "boundary"=> "INSIDE",
+           "zoneHierarchy" => "Buiding>8th level>Network-Zone",
+           "zoneTimeout" => 10,
+        },
+        {
+           "type"=> "ContainmentEventTrigger",
+           "eventEntity"=> "WIRELESS_CLIENTS",
+           "boundary"=> "OUTSIDE",
+           "zoneHierarchy" => "Building>8th level>Network-Zone",
+           "zoneTimeout" => 10,
+        }
+     ],
+     "NotificationReceiverInfo"=> {"transport"=>    {
+        "type"=> "TransportHttp",
+        "hostAddress"=> "192.168.0.1",
+        "port"=> 9292,
+        "macScramblingEnabled"=> false,
+        "urlPath"=> "/mse/",
+        "https"=> false
+     }}
+  }};
+
+=head2 $rest->notification_view
+
+View all notification created by the current logged user
+
+Parameters:
+
+* []: Defines query conditions for the interferers.
+
+=head2 $rest->notification_delete
+
+Delete specific notification
+
+Parameters:
+
+* name: name of the notification
+
 
 =head1 LICENSE
 
