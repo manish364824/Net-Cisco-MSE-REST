@@ -8,7 +8,7 @@ use LWP::UserAgent;
 use JSON;
 use HTTP::Request;
 
-our $VERSION = 0.1;
+our $VERSION = 0.2;
 
 sub new {
     my ($class, %params) = @_;
@@ -212,6 +212,24 @@ sub localisation_history_for_interferers_count {
     return $self->_get("/api/contextaware/v1/location/history/interferers/$args->{id}/count");
 }
 
+sub notification_create {
+    my ($self, $args) = @_;
+
+    return $self->_put("/api/contextaware/v1/notifications",$args);
+}
+
+sub notification_view {
+    my ($self, $args) = @_;
+
+    return $self->_get("/api/contextaware/v1/notifications/",$args);
+}
+
+sub notification_delete {
+    my ($self, $args) = @_;
+
+    return $self->_delete("/api/contextaware/v1/notifications/$args->{name}");
+}
+
 sub _get_bin {
     my ($self, $path, %params) = @_;
 
@@ -248,6 +266,54 @@ sub _get {
         }
     }
 }
+
+sub _put {
+    my ($self, $path, $params) = @_;
+
+    $self->{req}->method("PUT");
+    $self->{req}->uri($self->{url} . $path);
+
+    my $json = to_json($params);
+
+    $self->{req}->header( 'Content-Type' => 'application/json' );
+    $self->{req}->content( $json );
+
+    my $response = $self->{agent}->request($self->{req});
+
+    my $result = eval { from_json($response->content()) };
+
+    if ($response->is_success()) {
+        return $result;
+    } else {
+        if ($result) {
+            croak "server error: " . $result->{error};
+        } else {
+            croak "communication error: " . $response->message()
+        }
+    }
+}
+
+sub _delete {
+    my ($self, $path, $params) = @_;
+
+    $self->{req}->method("DELETE");
+    $self->{req}->uri($self->{url} . $path);
+
+    my $response = $self->{agent}->request($self->{req});
+
+    my $result = eval { from_json($response->content()) };
+
+    if ($response->is_success()) {
+        return $result;
+    } else {
+        if ($result) {
+            croak "server error: " . $result->{error};
+        } else {
+            croak "communication error: " . $response->message()
+        }
+    }
+}
+
 
 1;
 __END__
