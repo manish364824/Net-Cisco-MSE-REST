@@ -1,0 +1,5 @@
+libnet-cisco-mse-rest-perl (0.2-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Durand Fabrice <fdurand@inverse.ca>  Wed, 5 Oct 2016 09:24:27 -0400

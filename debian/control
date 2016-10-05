@@ -1,0 +1,15 @@
+Source: libnet-cisco-mse-rest-perl
+Section: perl
+Priority: optional
+Maintainer: Durand Fabrice <fdurand@inverse.ca>
+Build-Depends: debhelper (>= 8)
+Build-Depends-Indep: perl
+Standards-Version: 3.9.5
+Homepage: https://github.com/fdurand/Net-Cisco-MSE-REST
+
+Package: libnet-cisco-mse-rest-perl
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends}
+Description: REST interface for Cisco MSE
+ Net::Cisco::MSE provides a Perl interface for communication with Cisco MSE
+ using REST interface.
