@@ -15,3 +15,4 @@
 ^Net-Cisco-MSE-REST.*
 
 debian
+.travis.yml
