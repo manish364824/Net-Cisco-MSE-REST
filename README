@@ -1,5 +1,5 @@
 Net::Cisco::MSE::REST
-=================
+=====================
 
 DESCRIPTION
 -----------
@@ -21,6 +21,10 @@ make install
 AUTHORS
 -------
 Fabrice Durand <fdurand@inverse.ca>
+
+COPYRIGHT
+---------
+Copyright 2016 Inverse inc.
 
 LICENSE
 -------
